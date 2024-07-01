@@ -6,6 +6,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import SidebarLayout from "./layouts/sidebar"; // Use the sidebar layout
 import SplashScreen from "./pages/SplashScreen";
 import JoinActivity from "./pages/JoinActivity";
+import OTPActivity from "./pages/OTPActivity";
+import Driver from "./pages/Driver";
+import Success from "./pages/Success";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -26,6 +29,9 @@ const App = () => {
             <Route path="/" element={<SplashScreen />} />
             <Route path="/join" element={<SidebarLayout />}>
               <Route index element={<JoinActivity />} />
+              <Route path="/otp" element={<OTPActivity />} />
+              <Route path="/driver" element={<Driver />} />
+              <Route path="/success" element={<Success />} />
               {/* Add more routes here as needed */}
             </Route>
           </Routes>
