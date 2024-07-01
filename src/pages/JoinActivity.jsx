@@ -28,13 +28,13 @@ const JoinActivity = () => {
           <Label htmlFor="phone">Phone Number</Label>
           <Input id="phone" type="tel" placeholder="Enter your phone number" className="w-full" />
         </div>
+        <Button variant="outline" className="w-full">
+          Sign in with Google
+        </Button>
         <div className="flex items-center space-x-2">
           <Label htmlFor="join">Join</Label>
           <Switch id="join" />
         </div>
-        <Button variant="outline" className="w-full">
-          Sign in with Google
-        </Button>
       </div>
     </div>
   );
