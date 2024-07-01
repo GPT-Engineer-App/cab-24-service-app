@@ -3,8 +3,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Home } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Layout from "./layouts/default"; // available: default, navbar, sidebar
-import Index from "./pages/Index.jsx";
+import SidebarLayout from "./layouts/sidebar"; // Use the sidebar layout
+import SplashScreen from "./pages/SplashScreen";
+import JoinActivity from "./pages/JoinActivity";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -22,8 +23,9 @@ const App = () => {
         <Toaster />
         <Router>
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Index />} />
+            <Route path="/" element={<SplashScreen />} />
+            <Route path="/join" element={<SidebarLayout />}>
+              <Route index element={<JoinActivity />} />
               {/* Add more routes here as needed */}
             </Route>
           </Routes>
