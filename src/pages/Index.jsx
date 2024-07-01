@@ -1,10 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="text-center">
-      <h1 className="text-3xl">Your Blank Canvas</h1>
-      <p>Chat with the agent to start making edits.</p>
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 space-y-4">
+      <h1 className="text-3xl font-bold">Welcome to CABs 24</h1>
+      <p className="text-lg">Your reliable cab service</p>
+      <div className="space-x-4">
+        <Link to="/join">
+          <Button variant="outline">Join as Passenger</Button>
+        </Link>
+        <Link to="/driver">
+          <Button variant="outline">Join as Driver</Button>
+        </Link>
+      </div>
     </div>
   );
 };
